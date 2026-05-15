@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-city"></i>
+                SmartCity
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#citizen-help">Feedback</a></li>
+                <li><a href="#" onclick="openLogin()">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Smart City Services</h1>
+            <p>Experience the future of urban living</p>
+            <a href="#" onclick="openLogin()" class="cta-button">
+                <i class="fas fa-sign-in-alt"></i> Get Started
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Smart Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Smart Lighting</h3>
+                <p>Energy-efficient lighting systems.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-car"></i></div>
+                <h3>Smart Parking</h3>
+                <p>Real-time parking availability.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                <h3>Free WiFi</h3>
+                <p>City-wide high-speed WiFi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="citizen-help" class="citizen-action">
+        <h2 class="section-title">Citizen Support</h2>
+
+        <div class="action-grid">
+            <div class="action-card">
+                <h3><i class="fas fa-bullhorn"></i> File a Complaint</h3>
+                <form id="complaintForm">
+                    <input type="text" placeholder="Complaint Category" required>
+                    <textarea rows="4" placeholder="Complaint details..." required></textarea>
+                    <button type="submit" class="submit-btn">Register Complaint</button>
+                </form>
+            </div>
+
+            <div class="action-card">
+                <h3><i class="fas fa-comments"></i> Service Feedback</h3>
+                <form id="feedbackForm">
+                    <textarea rows="4" placeholder="Your feedback"></textarea>
+                    <button type="submit" class="submit-btn">Send Feedback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="login-modal">
+        <div class="login-container">
+            <button class="close-btn" onclick="closeLogin()">&times;</button>
+            <h2>Login</h2>
+
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
